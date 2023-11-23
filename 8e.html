@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function isSameProduct(product1, product2){
+      if(product1.price === product2.price && product1.name === product2.name){
+        return true;
+      }else {
+        return false;
+      }
+    };
+    const product1 = {
+      name : 'Hello',
+      price : 1234
+    };
+    const product2 = {
+      name : 'hello',
+      price : 1234
+    }
+    console.log(isSameProduct(product1,product2));
+    console.log(product1.name.toUpperCase());
+    console.log('test'.repeat(3));
+  </script>
+</body>
+</html>

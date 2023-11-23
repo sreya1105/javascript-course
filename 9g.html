@@ -1,0 +1,37 @@
+<!--* there was calculation error with .99 at the end due to the reason here we have modified it by converting into cents and back to dollars. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cart Calculator</title>
+</head>
+<body>
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40 = +$10 shipping.</p>
+  <p>Orders over $40 = FREE shipping.</p>
+  <input placeholder="Cost of order" class="js-CostOfCart "
+  onkeydown="costHandling(event)">
+  <button onclick="Calculate()">
+    Calculate
+  </button>
+  <p class="js-total-cost"></p>
+  <script>
+    function costHandling(event){
+      if(event.key === 'Enter'){
+      Calculate();
+    }
+    }
+    const inputElement = document.querySelector('.js-CostOfCart');
+    console.log(inputElement.value);
+    function Calculate(value){
+      const inputElement = document.querySelector('.js-CostOfCart');
+      let cost =Number(inputElement.value)*100 ;
+      if(cost< 4000){
+        cost = cost+1000;
+      } 
+      console.log(cost);
+      document.querySelector('.js-total-cost').innerHTML = `$${cost/100}`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <button>9a</button>
+  <button class="js-9b">9b</button>
+  <p></p>
+  <button onclick="display('heads')">heads</button>
+  <button onclick="display('tails')">tails</button>
+  <p class="js-display"></p>
+  <input placeholder="Name" class="js-name" 
+    onkeydown="keydown(event)">
+  <button class="js-submit" onclick="submit()">Submit</button>
+  <p class="js-submit-display"></p>
+  
+  <script>
+    console.log(document.querySelector('button'));
+    document.querySelector('.js-9b').innerHTML = '9b done!';
+    function display(option){
+      document.querySelector('.js-display').innerHTML = `you chose: ${option}`;
+    }
+    function keydown(event){
+      if(event.key === 'Enter'){
+        submit()
+      }
+    }
+    function submit(){
+      let name = document.querySelector('.js-name');
+      let text = name.value;
+      console.log(text);
+      document.querySelector('.js-submit-display').innerHTML = `your name: ${text}`;
+    }
+  </script>
+</body>
+</html>

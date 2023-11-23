@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <p class="calculation"></p>
+<p>
+    <button onclick="
+    updateCalculation('1');
+    " class="value button">
+    1</button>
+
+    <button onclick="
+    updateCalculation('2');
+    " class="value button">
+    2</button>
+
+    <button onclick="
+    updateCalculation('3');
+    " class="value button">
+    3</button>
+
+    <button onclick="
+    updateCalculation('+');
+    " class="operators button">
+    +</button>
+</p>
+<p>
+    <button onclick="
+    updateCalculation('4');
+    " class="value button">
+    4</button>
+
+    <button onclick="
+    updateCalculation('5');
+    " class="value button">
+    5</button>
+
+    <button onclick="
+    updateCalculation('6');
+    " class="value button">
+    6</button>
+
+    <button onclick="
+    updateCalculation('-');
+    " class="operators button">
+    -</button>
+
+</p>
+    
+<p>
+    <button onclick="
+    updateCalculation('7');
+    " class="value button">
+    7</button>
+
+    <button onclick="
+    updateCalculation('8');
+    " class="value button">
+    8</button>
+
+    <button onclick="
+    updateCalculation('9');
+    " class="value button">
+    9</button>
+
+    <button onclick="
+    updateCalculation('*');
+    " class="operators button">
+    *</button>
+</p>
+<p>
+    <button class="value button" 
+    onclick="
+    updateCalculation('0');
+    " >
+    0</button>
+
+    <button onclick="
+    updateCalculation('.');
+    " class="value button">
+    .</button>
+
+    <button onclick="
+    calculation = eval(calculation);
+    localStorage.setItem('calculation', calculation);
+    calculationDisplay();
+    console.log(calculation);
+    " class="value button">
+    =</button>
+
+    <button onclick="
+    updateCalculation('/');
+    " class="operators button">
+    /</button>
+    
+</p>    
+<p>
+    <button onclick="
+    calculation = '';
+    console.log(`cleared ${calculation}`);
+    localStorage.setItem('calculation', calculation);
+    calculationDisplay();
+    " class="value button clear-button">
+    Clear</button>
+</p>
+<script src="calculator.js"></script>    
+</body>
+</html>

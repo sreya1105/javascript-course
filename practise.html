@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+    play('heads')">
+    heads
+  </button>
+  <button onclick="
+  play('tails')">
+    tails
+  </button>
+  <button onclick="
+  output_result.win = 0;
+  output_result.lose = 0">
+    Reset output_result
+  </button>
+
+
+  <script>
+    const output_result = JSON.parse(localStorage.getItem('output_result')) || {
+      win: 0,
+      lose: 0
+    };
+    function play(guess){
+    const actual = Math.random();
+    const result = actual > 0.5 ? 'heads' : 'tails';
+    if(guess === result) {
+      output_result.win++;
+    } else {
+      output_result.lose++
+    };
+    alert(guess === result ? 'win': 'loose');
+    console.log(actual);
+    console.log(output_result);
+    localStorage.setItem('output_result',JSON.stringify(output_result)); 
+  }  
+  </script>
+</body>
+</html>

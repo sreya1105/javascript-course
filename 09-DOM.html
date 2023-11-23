@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM</title>
+</head>
+<body>
+  <p>You tube subscribe button</p>
+  <button onclick=" 
+    const buttonElement = document.querySelector('.js-subscribe-button');
+    if(buttonElement.innerText === 'Subscribe'){//here innerText indicates only for text regardless of spaces. innerHTML consider along with spaces so that if there are any spaces between word and angular braces they have to be added for innerHTML.
+      buttonElement.innerHTML = 'Subscribed';
+    } else {
+      buttonElement.innerHTML = 'Subscribe';
+    }
+  " class = "js-subscribe-button">
+  Subscribe
+  </button>
+  <script>
+
+  </script>
+</body>
+</html>

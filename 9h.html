@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>print name along with us</title>
+</head>
+<body>
+  <input placeholder="Type something" class="js" onkeyup="typeContent(event)">
+  <p class="js-onkey"></p>
+  <script>
+    function typeContent(){
+      let inputElement = document.querySelector('.js');
+      document.querySelector('.js-onkey').innerHTML = inputElement.value;
+    }
+  </script>
+</body>
+</html>
