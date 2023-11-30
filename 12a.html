@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>App</title>
+</head>
+<body>
+    <!-- <button class="start-button" onclick="updateButton()">Start</button> -->
+    <!-- <button onclick="updateButton()">Add to Cart</button>
+    <p class="added-text"></p> -->
+    <button class="add-button" onclick="add()">Add</button>
+    <button class="remove-button" onclick="remove()">remove</button>
+    <script>
+        /* 12.a
+        let add = function(){
+            console.log(2+3);
+        }
+        // add();
+        // add();
+        
+        12.b
+        function runTwice(fun){
+            fun();
+            fun();
+        }
+        runTwice(function(){
+            console.log('12b');
+        });
+        runTwice(add);
+        12.c
+        function updateButton(){
+            const button = document.querySelector('.start-button')
+            setTimeout(function(){
+                button.innerHTML='Finished!'
+            },500);
+        }
+        12.d 
+        function updateButton(){
+            const button = document.querySelector('.start-button')
+            setTimeout(function(){
+                button.innerHTML='Finished!'
+            },1000);
+            button.innerHTML='Loading...'
+        }
+        12.e
+        function updateButton(){
+            let timeOutID;
+            const button = document.querySelector('.added-text');
+            button.innerHTML='Added to cart';
+            clearTimeout(timeOutID);
+            timeOutID= setTimeout(function(){
+                button.innerHTML=''
+            },2000); 
+        }
+        12.f 
+        setInterval(function(){
+            if(document.title === 'App'){
+                document.title = '(2)messages'
+            }else{
+                document.title = 'App'
+            }
+        },2000);
+
+        12.g,h,i
+        let count=0;
+        function add(){
+            count++;
+        }
+        function remove(){
+            count--;
+        }
+        setInterval(function(){
+            if(count<=0){
+                document.title = 'App';
+            }else{
+                if(document.title === 'App'){
+                    document.title = `(${count})messages`;
+                }else{
+                    document.title = 'App';
+            }
+            }
+            
+        },2000);*/
+        
+
+    </script>
+    
+</body>
+</html>
