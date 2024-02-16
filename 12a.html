@@ -4,83 +4,134 @@
     <title>App</title>
 </head>
 <body>
-    <!-- <button class="start-button" onclick="updateButton()">Start</button> -->
+    <button class="start-button" onclick="updateButton()">Start</button>
     <!-- <button onclick="updateButton()">Add to Cart</button>
     <p class="added-text"></p> -->
-    <button class="add-button" onclick="add()">Add</button>
-    <button class="remove-button" onclick="remove()">remove</button>
-    <script>
-        /* 12.a
-        let add = function(){
-            console.log(2+3);
+    <!-- <button class="add-button" onclick="add()">Add</button>
+    <button class="remove-button" onclick="remove()">remove</button> -->
+<script>
+    /* 12.a
+    let add = function(){
+        console.log(2+3);
+    }
+    // add();
+    // add();
+    
+    12.b
+    function runTwice(fun){
+        fun();
+        fun();
+    }
+    runTwice(function(){
+        console.log('12b');
+    });
+    runTwice(add);
+    12.c
+    function updateButton(){
+        const button = document.querySelector('.start-button')
+        setTimeout(function(){
+            button.innerHTML='Finished!'
+        },500);
+    }
+    12.d 
+    function updateButton(){
+        const button = document.querySelector('.start-button')
+        setTimeout(function(){
+            button.innerHTML='Finished!'
+        },1000);
+        button.innerHTML='Loading...'
+    }
+    12.e
+    function updateButton(){
+        let timeOutID;
+        const button = document.querySelector('.added-text');
+        button.innerHTML='Added to cart';
+        clearTimeout(timeOutID);
+        timeOutID= setTimeout(function(){
+            button.innerHTML=''
+        },2000); 
+    }
+    12.f 
+    setInterval(function(){
+        if(document.title === 'App'){
+            document.title = '(2)messages'
+        }else{
+            document.title = 'App'
         }
-        // add();
-        // add();
-        
-        12.b
-        function runTwice(fun){
-            fun();
-            fun();
-        }
-        runTwice(function(){
-            console.log('12b');
-        });
-        runTwice(add);
-        12.c
-        function updateButton(){
-            const button = document.querySelector('.start-button')
-            setTimeout(function(){
-                button.innerHTML='Finished!'
-            },500);
-        }
-        12.d 
-        function updateButton(){
-            const button = document.querySelector('.start-button')
-            setTimeout(function(){
-                button.innerHTML='Finished!'
-            },1000);
-            button.innerHTML='Loading...'
-        }
-        12.e
-        function updateButton(){
-            let timeOutID;
-            const button = document.querySelector('.added-text');
-            button.innerHTML='Added to cart';
-            clearTimeout(timeOutID);
-            timeOutID= setTimeout(function(){
-                button.innerHTML=''
-            },2000); 
-        }
-        12.f 
-        setInterval(function(){
-            if(document.title === 'App'){
-                document.title = '(2)messages'
-            }else{
-                document.title = 'App'
-            }
-        },2000);
+    },2000);
 
-        12.g,h,i
-        let count=0;
-        function add(){
-            count++;
-        }
-        function remove(){
-            count--;
-        }
-        setInterval(function(){
-            if(count<=0){
-                document.title = 'App';
+    12.g,h,i
+    let count=0;
+    function add(){
+        count++;
+    }
+    function remove(){
+        count--;
+    }
+    setInterval(function(){
+        if(count<=0){
+            document.title = 'App';
+        }else{
+            if(document.title === 'App'){
+                document.title = `(${count})messages`;
             }else{
-                if(document.title === 'App'){
-                    document.title = `(${count})messages`;
-                }else{
-                    document.title = 'App';
-            }
-            }
-            
-        },2000);*/
+                document.title = 'App';
+        }
+        }
         
+    },2000);
+    12.j,k
+    const multiply= (a,b) => a*b;
+    console.log(multiply(5,3));
+    console.log(multiply(4,8));
+
+    12.l
+    function countPositive(nums){
+        let count =0;
+        nums.forEach((num)=>{
+            if(num>0){
+                count++;
+            }
+        });
+        return count;
+    }
+    console.log(countPositive([1,-2,3]));
+
+    12.m 
+    function addNum(array,num){
+        
+        return array.map(value=> (value)+num);
+    }
+    console.log(addNum([1,2,33],8));
+    12.n 
+    function removeEggs(food){
+        return food.filter((food)=>food !== 'egg');
+    }
+    console.log(removeEggs(['sandwich','egg','tomato','egg','mango']));
+    
+    12.0 
+    function removeEggs(food){
+        count =0;
+        return food.filter((food)=>{
+            if(food==='egg'&& count<2){
+                count++;
+                return false;
+            }else 
+            return true;
+        });
+    }
+    console.log(removeEggs(['sandwich','egg','tomato','egg','mango','egg']));
+    12.p*/
+    function updateButton(){
+        document.querySelector('.start-button')
+            .addEventListener('click',()=>{
+                const button = document.querySelector('.start-button');
+                setTimeout(()=>{
+                button.innerHTML='Finished!'
+                },500);
+            })
+        
+    }
 
     </script>
     
